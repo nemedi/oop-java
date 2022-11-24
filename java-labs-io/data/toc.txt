@@ -1,0 +1,19 @@
+1. Introducere
+1.1. Descrierea problemei
+1.2. Prezentarea functiilor aplicatiei
+1.3. Prezentarea solutiilor existente
+2. Proiectarea aplicatiei
+2.1. Modelul entitate-asociere
+2.2. Diagrama cazurilor de utilizare
+2.3. Diagrama de pachete si clase
+2.4. Diagrama de secventa
+2.5. Diagrama de componente
+2.6. Securizarea aplicatiei
+3. Implementarea aplicatiei
+3.1. Tehnologiile utilizate
+3.2. Algoritmii folositi
+3.3. Problemele tehnice si solutiile gasite
+4. Concluzii
+4.1. Functii oferite de aplicatie
+4.2. Limitelor actuale ale aplicatiei
+4.3. Directii de dezvoltare viitoare
