@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>Talk</title>
+		<script src="jquery.js"></script>
+		<script>
+			$(document).ready(function () {
+				var index = 0;
+				function loadMessages() {
+					$.get('talk?index=' + index, function(data) {
+						var values = data.split('|');
+						index = values[0];
+						for (var i = 1; i < values.length; i++) {
+							$('#messages').append(new Option(values[i], i));
+						}
+					});
+				}
+				$('#message').keyup(function (event) {
+					if (event.key === "Enter"
+						&& $('#message').val().length > 0) {
+						$.post('talk', $('#message').val(), function () {});
+						$('#message').val('');
+					}
+				});
+				setInterval(loadMessages, 1000);
+			});
+		</script>
+	</head>
+	<body>
+		<table style="width:500px"">
+			<tr>
+				<td colspan="2">
+					<h1>Talk</h1>
+				</td>
+			</tr>
+			<tr>
+				<td>Message</td>
+				<td width="100%">
+					<input id="message" style="width:100%">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" width="100%">
+					<fieldset>
+						<legend>Messages</legend>
+						<select id="messages" size="20" style="width:100%;border:0px"></select>
+					</fieldset>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
